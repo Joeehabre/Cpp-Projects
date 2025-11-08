@@ -9,17 +9,24 @@ Each project demonstrates object-oriented design, templates, STL usage, and mult
   <img alt="Platform" src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey">
 </p>
 
+---
+
 ## 🧠 Projects
+
 | Folder | Description | Concepts |
 |---|---|---|
+| **datastructures/** | Implements a custom `Vector`, `Stack`, and `Queue` | Templates, STL comparison, RAII |
 | **tictactoe/** | Console Tic-Tac-Toe with an unbeatable AI | OOP, recursion, Minimax, game logic |
 | **thread_downloader/** | Simulated file downloader using threads | Concurrency, mutex, synchronization |
+| **hash_map/** | Header-only hash map with open addressing | Templates, linear probing, rehashing |
+| **thread_pool/** | Thread pool with worker threads and safe task queue | Multithreading, condition variables, queue synchronization |
+
+---
 
 ## 🚀 Quick Start
+
+### 🧩 datastructures
 ```bash
-
-# play tic tac toe
-cd ../tictactoe && make && ./tictactoe
-
-# run downloader simulation
-cd ../thread_downloader && make && ./thread_downloader
+cd datastructures
+make
+./datastructures

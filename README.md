@@ -12,14 +12,11 @@ Each project demonstrates object-oriented design, templates, STL usage, and mult
 ## 🧠 Projects
 | Folder | Description | Concepts |
 |---|---|---|
-| **datastructures/** | Implements a custom `Vector`, `Stack`, and `Queue` | Templates, STL comparison, RAII |
 | **tictactoe/** | Console Tic-Tac-Toe with an unbeatable AI | OOP, recursion, Minimax, game logic |
 | **thread_downloader/** | Simulated file downloader using threads | Concurrency, mutex, synchronization |
 
 ## 🚀 Quick Start
 ```bash
-# build & run data structures
-cd datastructures && make && ./datastructures
 
 # play tic tac toe
 cd ../tictactoe && make && ./tictactoe

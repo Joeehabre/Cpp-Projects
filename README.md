@@ -1,5 +1,7 @@
 # Cpp-Projects
 
+![Build](https://github.com/Joeehabre/Cpp-Projects/actions/workflows/build.yml/badge.svg)
+
 A collection of **modern C++** projects by **Joe Habre (AUB)**.  
 Each project showcases a distinct systems-programming concept: data structures, multithreading, AI, and concurrency patterns.
 

@@ -1,0 +1,24 @@
+# Compiled output
+*.o
+*.a
+*.out
+*.dSYM/
+
+# Per-project binaries
+hash_map/hash_map
+thread_pool/thread_pool
+thread_downloader/thread_downloader
+tictactoe/tictactoe
+
+# Build dirs
+build/
+cmake-build-*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

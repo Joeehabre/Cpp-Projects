@@ -1,32 +1,74 @@
 # Cpp-Projects
 
 A collection of **modern C++** projects by **Joe Habre (AUB)**.  
-Each project demonstrates object-oriented design, templates, STL usage, and multithreading.
+Each project showcases a distinct systems-programming concept: data structures, multithreading, AI, and concurrency patterns.
 
 <p align="left">
   <img alt="MIT" src="https://img.shields.io/badge/License-MIT-green">
-  <img alt="Language" src="https://img.shields.io/badge/C++-17-blue">
+  <img alt="Language" src="https://img.shields.io/badge/C++-17%20%7C%2020-blue">
   <img alt="Platform" src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey">
 </p>
 
 ---
 
-## 🧠 Projects
+## Projects
 
-| Folder | Description | Concepts |
+| Folder | Description | Key Concepts |
 |---|---|---|
-| **datastructures/** | Implements a custom `Vector`, `Stack`, and `Queue` | Templates, STL comparison, RAII |
-| **tictactoe/** | Console Tic-Tac-Toe with an unbeatable AI | OOP, recursion, Minimax, game logic |
-| **thread_downloader/** | Simulated file downloader using threads | Concurrency, mutex, synchronization |
-| **hash_map/** | Header-only hash map with open addressing | Templates, linear probing, rehashing |
-| **thread_pool/** | Thread pool with worker threads and safe task queue | Multithreading, condition variables, queue synchronization |
+| [`hash_map/`](hash_map/) | Header-only hash map with open addressing and tombstone deletion | Templates, linear probing, rehashing, iterators |
+| [`thread_pool/`](thread_pool/) | Thread pool where every task returns a `std::future` | `std::packaged_task`, condition variables, `wait_all()` |
+| [`thread_downloader/`](thread_downloader/) | Concurrent file downloader with per-file timing and result tracking | `std::thread`, `std::mt19937`, mutex, structured results |
+| [`tictactoe/`](tictactoe/) | Console Tic-Tac-Toe with an unbeatable AI | OOP, Minimax, alpha-beta pruning, depth scoring |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
-### 🧩 datastructures
+Each project is self-contained with its own `MakeFile`. Clone the repo, pick a project, and build:
+
 ```bash
-cd datastructures
+git clone https://github.com/Joeehabre/Cpp-Projects.git
+cd Cpp-Projects
+```
+
+### hash_map
+```bash
+cd hash_map
 make
-./datastructures
+./hash_map
+```
+
+### thread_pool
+```bash
+cd thread_pool
+make        # requires C++20
+./thread_pool
+```
+
+### thread_downloader
+```bash
+cd thread_downloader
+make
+./thread_downloader
+```
+
+### tictactoe
+```bash
+cd tictactoe
+make
+./tictactoe
+```
+
+---
+
+## Requirements
+
+- **Compiler:** GCC 10+ or Clang 12+ (C++17 minimum; `thread_pool` requires C++20)
+- **Build:** `make` (GNU Make)
+- **Threading:** projects that use threads link with `-pthread` automatically via the Makefile
+
+---
+
+## License
+
+[MIT](LICENSE)

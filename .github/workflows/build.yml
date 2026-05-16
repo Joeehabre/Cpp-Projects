@@ -1,4 +1,4 @@
-name: Build
+name: Build & Run
 
 on:
   push:
@@ -12,17 +12,52 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install build tools
-        run: sudo apt-get install -y g++ make
+      # ubuntu-latest ships g++ 13 — no extra install needed
+      - name: Verify compiler
+        run: g++ --version
 
+      # ── hash_map ──────────────────────────────────────────────────────────
       - name: Build hash_map
         run: cd hash_map && make -f MakeFile
 
+      - name: Run hash_map
+        run: |
+          cd hash_map
+          output=$(./hash_map)
+          echo "$output"
+          echo "$output" | grep -q "Stress test passed"
+
+      # ── thread_pool ────────────────────────────────────────────────────────
       - name: Build thread_pool
         run: cd thread_pool && make -f MakeFile
 
+      - name: Run thread_pool
+        run: |
+          cd thread_pool
+          output=$(./thread_pool)
+          echo "$output"
+          echo "$output" | grep -q "Sum of squares (1..10) = 385"
+
+      # ── thread_downloader ──────────────────────────────────────────────────
       - name: Build thread_downloader
         run: cd thread_downloader && make -f MakeFile
 
+      - name: Run thread_downloader
+        run: |
+          cd thread_downloader
+          output=$(./thread_downloader)
+          echo "$output"
+          echo "$output" | grep -q "Download Summary"
+
+      # ── tictactoe ──────────────────────────────────────────────────────────
       - name: Build tictactoe
         run: cd tictactoe && make -f MakeFile
+
+      - name: Run tictactoe (scripted game)
+        run: |
+          cd tictactoe
+          # Feed moves: 5 (centre) → 3 → 9 → 2, then decline play-again
+          output=$(printf "5\n3\n9\n2\nn\n" | ./tictactoe)
+          echo "$output"
+          # Game must reach a conclusion
+          echo "$output" | grep -qE "AI wins!|You win!|Draw!"

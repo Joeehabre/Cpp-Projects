@@ -18,7 +18,7 @@ jobs:
 
       # ── hash_map ──────────────────────────────────────────────────────────
       - name: Build hash_map
-        run: cd hash_map && make -f MakeFile
+        run: cd hash_map && make
 
       - name: Run hash_map
         run: |
@@ -29,7 +29,7 @@ jobs:
 
       # ── thread_pool ────────────────────────────────────────────────────────
       - name: Build thread_pool
-        run: cd thread_pool && make -f MakeFile
+        run: cd thread_pool && make
 
       - name: Run thread_pool
         run: |
@@ -40,7 +40,7 @@ jobs:
 
       # ── thread_downloader ──────────────────────────────────────────────────
       - name: Build thread_downloader
-        run: cd thread_downloader && make -f MakeFile
+        run: cd thread_downloader && make
 
       - name: Run thread_downloader
         run: |
@@ -51,7 +51,7 @@ jobs:
 
       # ── tictactoe ──────────────────────────────────────────────────────────
       - name: Build tictactoe
-        run: cd tictactoe && make -f MakeFile
+        run: cd tictactoe && make
 
       - name: Run tictactoe (scripted game)
         run: |

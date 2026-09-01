@@ -3,7 +3,7 @@
 ![Build](https://github.com/Joeehabre/Cpp-Projects/actions/workflows/build.yml/badge.svg)
 
 A collection of **modern C++** projects by **Joe Habre (AUB)**.  
-Each project showcases a distinct systems-programming concept: data structures, multithreading, AI, and concurrency patterns.
+Each project covers a different systems-programming idea: data structures, multithreading, game AI, and concurrency patterns.
 
 <p align="left">
   <img alt="MIT" src="https://img.shields.io/badge/License-MIT-green">

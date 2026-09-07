@@ -1,6 +1,6 @@
 # tictactoe
 
-Console Tic-Tac-Toe with an **unbeatable AI** powered by Minimax and alpha-beta pruning. The AI never loses — the best a human can achieve is a draw.
+Console Tic-Tac-Toe with an **unbeatable AI** powered by Minimax and alpha-beta pruning. The AI never loses: the best a human can achieve is a draw.
 
 ## Features
 
